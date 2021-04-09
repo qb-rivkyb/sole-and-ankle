@@ -48,6 +48,7 @@ const LeftColumn = styled.div`
   align-self: start;
   position: sticky;
   top: 25px;
+  margin-top: -70px;
 `;
 
 const MainColumn = styled.div``;
@@ -55,6 +56,7 @@ const MainColumn = styled.div``;
 const Header = styled.header`
   display: flex;
   margin-bottom: 34px;
+  margin-left: 260px;
 `;
 
 const Title = styled.h2`
