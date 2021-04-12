@@ -24,39 +24,41 @@ const ShoeIndex = ({ sortId, setSortId }) => {
             <option value="price">Price</option>
           </Select>
         </Header>
-        {/* <Spacer size={34} /> */}
-      </MainColumn>
-      <div style={{ display: "flex" }}>
-        <LeftColumn>
-          <Breadcrumbs>
-            <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
-            <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
-            <Breadcrumbs.Crumb href="/sale/shoes">Shoes</Breadcrumbs.Crumb>
-          </Breadcrumbs>
-          <Spacer size={42} />
-          <ShoeSidebar />
-        </LeftColumn>
+        <Spacer size={34} />
         <ShoeGrid />
-      </div>
+      </MainColumn>
+      <LeftColumn>
+        <Breadcrumbs>
+          <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
+          <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
+          <Breadcrumbs.Crumb href="/sale/shoes">Shoes</Breadcrumbs.Crumb>
+        </Breadcrumbs>
+        <Spacer size={42} />
+        <ShoeSidebar />
+      </LeftColumn>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div``;
-
-const LeftColumn = styled.div`
-  align-self: start;
-  position: sticky;
-  top: 25px;
-  margin-top: -70px;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  gap: 32px;
 `;
 
-const MainColumn = styled.div``;
+const LeftColumn = styled.div`
+  flex-basis: 248px;
+`;
+
+const MainColumn = styled.div`
+  flex: 1;
+`;
 
 const Header = styled.header`
   display: flex;
-  margin-bottom: 34px;
-  margin-left: 260px;
+  justify-content: space-between;
+  align-items: baseline;
 `;
 
 const Title = styled.h2`
